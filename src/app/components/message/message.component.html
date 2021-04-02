@@ -1,0 +1,14 @@
+
+<div *ngFor="let histo of histoAfficher">
+        <div class="container" *ngIf="estSmsEntrant(histo.envoyeur)" >
+            <img src="./../../../assets/image/user1.png" alt="Avatar" class="left">
+            <p>{{histo.message}}</p>
+            <span class="time-right">{{histo.date| date:'short'}}</span>
+          </div>
+          
+          <div class="container darker" *ngIf="estSmsSortant(histo.envoyeur)" >
+            <img src="./../../../assets/image/user1.png" alt="Avatar" class="right">
+            <p>{{histo.message}}</p>
+            <span class="time-left">{{histo.date| date:'short'}}</span>
+        </div>
+</div>
