@@ -1,0 +1,12 @@
+ <div class="flex-container">
+     <div></div><div></div>
+        <div><label>Trier : </label></div>
+        <div><select  class="classic" [(ngModel)]= "type"  >
+            <option  [ngValue]="types[0]" selected>{{types[0].nom}}</option>
+            <option  [ngValue]="types[1]">{{types[1].nom}}</option>
+            <option  [ngValue]="types[2]">{{types[2].nom}}</option>
+        </select></div>
+        <div><button class="button"  (click) = "trier()">Voir</button></div>
+        <div><button class="button effacer" (click) = "effacer()" >Effacer</button> </div>  
+</div>
+    

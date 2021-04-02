@@ -1,0 +1,24 @@
+<div *ngIf="histoAfficher"  class="table-wrapper">
+    <table  class="fl-table">
+        <thead>
+        <tr>
+            <th>Type</th>
+            <th>Numero</th>
+            <th>Contenu</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let histo of histoAfficher" >
+            <td *ngIf="estAppelEntrant(histo.envoyeur)"><i class="fa fa-arrow-down"></i></td>
+            <td *ngIf="estAppelSortant(histo.envoyeur)"><i class="fa fa-arrow-up"></i></td>
+            <td *ngIf="estAppelEntrant(histo.envoyeur)">{{histo.envoyeur}}</td>
+            <td *ngIf="estAppelSortant(histo.envoyeur)">{{histo.receveur}}</td>
+            <td *ngIf="histo.duree" >{{histo.duree}}  </td>
+            <td *ngIf="histo.message" >{{histo.message}}  </td>
+            <td>{{histo.date | date:'medium'}}</td>
+        </tr>
+        <tbody>
+    </table>
+</div>
+

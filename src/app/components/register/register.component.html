@@ -1,0 +1,21 @@
+<section>
+    <div class="container">
+        <div class="user signinBx">
+            <div class="imgBx"><img src="./../../../../assets/image/telma1.jpg" alt="" /></div>
+        <div class="formBx">
+            <form [formGroup] = "form"  >
+                <h2>Creer un compte</h2>
+                <input type="text"   formControlName ="nom"  name="nom" placeholder="Nom" />
+                <input type="email"  formControlName ="prenom"  name="prenom" placeholder="Prenom" />
+                <input type="numero" formControlName ="numero"   name="numero" placeholder="Numero" />
+                <input type="password" formControlName ="mdp" name="mdp" placeholder="Mots de passe" />
+                <input type="submit" (click) = "register()" name="" value="Sign Up" />
+                <p class="signup">
+                Vous avez deja un compte ?
+                <a href="#" [routerLink] = "'/'">Se connecter</a>
+                </p>
+            </form>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,3 @@
+<app-menu></app-menu>
+<app-appel-type  [types] = "types" (clickEffacer) = "effacerHistorique($event)" (clickFiltreAppel) = "setHistoriqueAfficher($event)"></app-appel-type>
+<app-historique-appel [histoAfficher] = "histoAfficher" [client] = "client"></app-historique-appel>
